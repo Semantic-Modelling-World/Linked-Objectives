@@ -46,6 +46,35 @@ The tool includes an interactive diagram editor (e.g., Excalidraw integration) t
 
 ---
 
+## Using Triple Stores
+
+Linked Objectives is compatible with free and open-source triple stores such as Ontotext GraphDB, Apache Jena Fuseki, and others. These tools allow you to load, query, and manage the RDF data provided in this project. Follow these steps to get started:
+
+1. **Install a Triple Store**:
+   - Download and install a triple store of your choice (e.g., [Ontotext GraphDB](https://www.ontotext.com/products/graphdb/), [Apache Jena Fuseki](https://jena.apache.org/documentation/fuseki2/)).
+
+2. **Load RDF Data**:
+   - Import the RDF files from the `data` directory into your triple store.
+   - Ensure that the namespaces and prefixes are correctly resolved.
+
+3. **Run SPARQL Queries**:
+   - Use the SPARQL endpoint provided by the triple store to query the data.
+   - Example query:
+     ```sparql
+     SELECT ?objective ?keyResult
+     WHERE {
+       ?objective a <https://data.sick.com/voc/sam/objectives-model/Objective> ;
+                  <https://data.sick.com/voc/sam/objectives-model/hasKeyResult> ?keyResult .
+     }
+     ```
+
+4. **Explore and Extend**:
+   - Use the triple store's interface to explore the data and test the provided SHACL shapes for validation.
+
+For more details, refer to the documentation of your chosen triple store.
+
+---
+
 ## Maintainers
 
 This project is developed and maintained by **[SICK AG](https://sick.com)**.  
