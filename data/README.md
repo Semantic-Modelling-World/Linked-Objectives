@@ -36,6 +36,12 @@ The `data` directory is organized into the following subdirectories:
 
 ---
 
+## Responsibility for Ontology Changes
+
+Changes to the ontologies should generally be avoided. If modifications are necessary, they must be made within your own namespace and under your own responsibility. However, feel free to contact us for further assistance. We are open to improving them and grateful for any feedback.
+
+---
+
 ## How to Use the Example Datasets
 
 1. **Load the Example Data**:
